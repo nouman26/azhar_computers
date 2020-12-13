@@ -111,8 +111,11 @@
     <h2 class="page-header">Add Receiveing EMI</h2>
     <form class="form" method="POST" action="/clientdetails">
       <input type="text" name="button" id="button" style="display: none;">
-      <input type="text" name="amount" placeholder="Amount" required id="amount">
-      <input type="date" name="rdate" placeholder="Receiveing Date" required>
+      <label style="margin-bottom:8px;">Amount: </label>
+      <input type="text" name="amount" required id="amount">
+      <br>
+      <label style="margin-bottom:8px;">Receiveing Date: </label>
+      <input type="date" name="rdate" required>
       <button type="submit" class="submit btn">ADD</button>
     </form>
   </div>

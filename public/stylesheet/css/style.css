@@ -117,7 +117,7 @@ div ul a:hover{
     border-color:#002e6e;
 }
 
-.bn:hover,.submit:hover{
+.bn:hover{
     background-color: #fff;
     color:#002e6e !important;
     border: 3px solid #002e6e;
@@ -152,6 +152,14 @@ form input{
 
 .footer-distributed,.col-sm-6,.col-sm-5{
     position: unset !important;
+}
+.submit:hover{
+    background-color: #fff;
+    color:#002e6e !important;
+    border: 3px solid #002e6e;
+    padding: 4px 10px;
+    font-weight: bold;
+    transition: linear 1s;
 }
 .btn{
     display: block !important;
