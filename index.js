@@ -179,7 +179,7 @@ app.post("/clients",validation,upload,function(req,res){
     }
     
     // client model in sign data base
-    client_model=myDBsign.model("Client",clientschema);
+    client_model=myDBsign.model("client",clientschema);
 
     // is ko middleware main is lie nhi rkha q k multer lga hai aur multer ko use krte hwe hum image upload krwa rhe hain
     if(formvar=="add_new_client"){
@@ -206,7 +206,7 @@ app.post("/clients",validation,upload,function(req,res){
                     var filter_clients=client_model.find({});
                     filter_clients.exec(function(err,data){
                         if (err) throw error;
-                        res.render("Clients",{read:data,msg:messagenew});
+                        res.render("clients",{read:data,msg:messagenew});
                     });
                 });
             }
@@ -224,7 +224,7 @@ app.post("/clients",validation,upload,function(req,res){
         var filter=client_model.find({});
         filter.exec(function(err,data){
             if (err) throw error;
-            res.render("Clients",{read:data,msg:messagenew})
+            res.render("clients",{read:data,msg:messagenew})
         })
     }
 });
