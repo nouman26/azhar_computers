@@ -1,0 +1,158 @@
+.stk{
+	position: relative;
+}
+*{
+	margin: 0;
+	padding: 0;
+	margin-top: 0.3%;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+a{
+	text-decoration:none;
+}
+a:hover{
+	text-decoration:none;
+}
+
+p{
+	font-size: 0.9rem;
+	line-height: 1.6;
+	font-weight: 400;
+	color: #606060;
+}
+
+i{
+	color:  #002e6e !important;
+}
+
+/* ***************Navigation Bar************************* */
+nav{
+	position: sticky;
+	top: 0;
+  }
+nav{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 100%;
+	background-color: white;
+	display: flex !important;
+}
+
+.menu{
+	width: 25%;
+	margin-top: 15px;
+}
+.menu ul{
+	float: right;
+	margin-right: 10%;
+	margin-bottom: 0px;
+}
+.menu ul a
+{
+	text-decoration: none;
+	color:  #002e6e;
+	background-color: white;
+	padding: 0% 10px;
+	border-radius: 20px;
+	border: 1px solid  #002e6e;
+}
+
+.menu ul a:hover{
+	background-color:  #002e6e;
+	color: white;
+	border-radius: 20px;
+	border: 1px solid  #002e6e;
+}
+.logo{
+	float: left;
+	width: 75%;
+}
+@media screen and (min-width: 771px){
+.menu ul a {
+	font-size: 20px;
+}
+
+.menu ul a{
+	padding: 0% 10px;
+}
+
+.headerlogo1 {
+	width: 30%;
+	margin-right: 17%;
+}
+
+.headerlogo2 {
+	width: 140px;
+	margin-right: 25%;
+}
+}
+
+@media screen and (max-width: 771px){
+.menu ul a {
+	font-size:12px;
+}
+.headerlogo1 {
+	width: 40%;
+	margin-right: 13%;
+}
+
+.headerlogo2 {
+	width: 140px;
+	margin-right: 16%;
+}
+} 
+ @media screen and (max-width: 450px){
+	.headerlogo1 {
+		width: 60%;
+		margin-right: 6%;
+	}
+	
+	.headerlogo2 {
+		width: 140px;
+		margin-right: 8%;
+} }
+/* ***************Navigation Bar End*************************
+
+
+/****************header CSS starts*****************/
+
+.headerlogo1 {
+	float: right;
+	transition: 2s;
+}
+
+.headerlogo2 {
+	width: 140px;
+	float: right;
+	transition: 2s;
+}
+
+
+.promo-area .zigzag-bottom, .brands-area .zigzag-bottom{background: #f4f4f4}
+.single-promo {
+    font-size: 25px;
+    font-weight: 200;
+    padding: 20px 10px;
+    text-align: center;
+}
+.single-promo i {
+  font-size: 50px;
+}
+
+.single-promo:hover {color: #fff;background: #222;}
+.promo1 { background:red;}
+.promo2 { background:#ffd900;}
+.promo3 { background:blue;}
+.promo4 { background:green;}
+.section-title {
+  font-family: "Raleway",sans-serif;
+  font-size: 50px;
+  font-weight: 100;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.single-promo i,.single-promo p{
+	color: white !important;
+}

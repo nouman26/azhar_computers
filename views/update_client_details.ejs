@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Azhar Computers</title>
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/gif" sizes="14x16">
+
+     <!-- External CSS -->
+    <link rel="stylesheet" href="/stylesheet/css/add_new_client_style.css">
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.inputmask.bundle.js"></script>
+</head>
+<body>
+  <nav>
+    <img class="headerlogo" src="/images/logo c1.png" alt="">
+  </nav>
+    <div class="form_wrapper">
+        <div class="form_container">
+          <div class="title_container">
+            <h2>Update Client</h2>
+          </div>
+          <div class="row clearfix">
+            <div class="">
+              
+              <form method="POST" action="/clientdetails">
+                <label style="margin-left:10%; margin-bottom:8px;">Full Name</label>
+
+                <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                  <input type="text" name="name" value="<%=record.name%>" required />
+                </div>
+
+                <label style="margin-left:10%; margin-bottom:8px;">Cast</label>
+                <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                  <input type="text" name="cast" value="<%=record.cast%>" required />
+                </div>
+
+                <label style="margin-left:10%; margin-bottom:8px;">CNIC No</label>
+                <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                  <input type="text" name="cnic" value="<%=record.cnic%>" data-inputmask="'mask': '99999-9999999-9'" required onkeypress='validate(event)'/>
+                </div>
+
+                <label style="margin-left:10%; margin-bottom:8px;">Phone no</label>
+                <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                  <input type="text" name="phone_no" value="<%=record.phone_no%>" data-inputmask="'mask': '9999-9999999'" required onkeypress='validate(event)' />
+                </div>
+
+                <label style="margin-left:10%; margin-bottom:8px;">Mobile Model</label>
+                <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                  <input type="text" name="mobile_model" value="<%=record.mobile_model%>" required />
+                </div>
+
+                <label style="margin-left:10%; margin-bottom:8px;">Issue Date</label>
+                <div class="input_field"> 
+                  <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                  <input type="date" name="issue_date" value="<%=date%>"  required />
+                </div>
+
+                <label style="margin-left:10%; margin-bottom:8px;">Mobile Price</label>
+                <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                  <input type="text" name="mobile_price" value="<%=record.mobile_price%>" required onkeypress='validate(event)' />
+                </div>
+
+                <label style="margin-left:10%; margin-bottom:8px;">Monthly Emi</label>
+                <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                  <input type="text" name="monthly_emi" value="<%=record.monthly_emi%>" required onkeypress='validate(event)' />
+                </div>
+                <input type="text" name="id" value="<%=record._id%>" style="display: none;">
+                <input type="text" name="form" value="update_client_details" style="display: none;">
+                <input class="button" type="submit" value="Register" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<script>
+      $(":input").inputmask();
+   
+     function validate(evt) {
+     var theEvent = evt || window.event;
+   
+     // Handle paste
+     if (theEvent.type === 'paste') {
+         key = event.clipboardData.getData('text/plain');
+     } else {
+     // Handle key press
+         var key = theEvent.keyCode || theEvent.which;
+         key = String.fromCharCode(key);
+     }
+     var regex = /[0-9]|\./;
+     if( !regex.test(key) ) {
+       theEvent.returnValue = false;
+       if(theEvent.preventDefault) theEvent.preventDefault();
+     }
+   }
+</script>
+</body>
+</html>

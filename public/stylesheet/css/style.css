@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+body ,h3{
+    font-size: 17px !important;
+}
+h3{
+    text-align: center;
+    background-color: #002e6e;
+    color: white !important;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height:300px;
+  }
+
+.col-sm-5{
+    float: right !important;
+}
+
+@media screen and (max-width: 768px){
+    .col-sm-5{
+        float: unset !important;
+        width: unset !important;
+    }
+
+    .col-sm-6{
+        float: unset !important;
+        margin: auto !important;
+    }
+    
+    .center{
+        margin-bottom: 20px;
+        height:250px;
+    }
+}
+
+@media screen and (max-width: 380px){
+    body,h3{
+        font-size: 12px !important;
+    }
+    .btn{
+        padding: 4px 6px !important;
+        font-size: 12px !important;
+    }
+    .center{
+        height:200px;
+    }
+    
+}
+
+@media screen and (max-width: 300px){
+    body,h3{
+        font-size: 10px !important;
+    }
+    .btn{
+        padding: 3px 4px !important;
+        font-size: 10px !important;
+    }
+}
+nav{
+	position: sticky;
+	top: 0;
+  }
+nav{
+	background-color: white;
+	display: flex !important;
+}
+    
+    .headerlogo1 {
+        transition: 2s;
+        margin:auto;
+        margin-top: 1%;
+    }
+    
+    .headerlogo2 {
+        transition: 2s;
+        width: 150px;
+        margin:auto;
+        margin-top: 1%;
+    }
+    
+div  ul a
+{
+	text-decoration: none;
+	color: white;
+	background-color: #002e6e;
+	padding: 0% 10px;
+	border-radius: 20px;
+	border: 1px solid #002e6e;
+}
+
+div ul a:hover{
+    text-decoration: none;
+	background-color: white;
+	color: #002e6e;
+	border-radius: 20px;
+	border: 1px solid #002e6e;
+}
+
+
+
+
+.table-hover-cells > tbody > tr > th:hover,
+.table-hover-cells > tbody > tr > td:hover {
+  background-color: #f5f5f5;
+}
+.bn,.submit{
+    display: block !important;
+}
+
+.bn,.submit{
+    margin: auto;
+    color: #fff;
+    background-color:#002e6e;
+    border-color:#002e6e;
+}
+
+.bn:hover,.submit:hover{
+    background-color: #fff;
+    color:#002e6e !important;
+    border: 3px solid #002e6e;
+    padding: 4px 10px;
+    font-weight: bold;
+    transition: linear 1s;
+}
+
+thead>tr{
+    background-color:#002e6e;
+    color: #fff;
+}
+
+.page-header{
+    text-align: center;
+    border-bottom: unset !important;
+    font-family: 'Do Hyeon', sans-serif;
+    color:#002e6e;
+}
+
+  /* Client Details Style */
+.form {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+form input{
+    margin-top: 10px;
+}
+.submit{
+    margin-top: 10px;
+}
+
+.footer-distributed,.col-sm-6,.col-sm-5{
+    position: unset !important;
+}
+.btn{
+    display: block !important;
+}
+.btn button{
+    background-color: #002e6e;
+    color: white;
+}
+
+.btn button:hover{
+    background-color: white;
+    color: #002e6e;
+    border: 2px solid #002e6e;
+}
+.t{
+    color: red;
+}
+.ebn{
+    border: none !important;
+    background: none !important;
+    display: block !important;
+    margin: auto;
+}

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azhar Computers</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/gif" sizes="14x16">
+
+    <link rel="stylesheet" href="/stylesheet/css/footer.css">
+    <link rel="stylesheet" href="/stylesheet/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    
+     <!-- jQuery library -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Load an icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  
+</head>
+<body>
+  <nav>
+    <img class="headerlogo1" src="/images/logo c1.png" alt="">
+  </nav>
+  <div class="container">
+    <h2 class="page-header">Clients Details</h2>
+    <!-- Table hover + Table hover cell -->
+    <div class="row">
+      <div class="col-sm-5">
+        <img class="center" src="/clients_images/<%=read1.image%>" alt="">
+      </div>
+      <div class="col-sm-6">
+        <table class="table">
+          <tr>
+            <td>Name</td>
+            <td><%=read1.name%></td>
+          </tr>
+          <tr>
+            <td>Cast</td>
+            <td><%=read1.cast%></td>
+          </tr>
+          <tr>
+            <td>CNIC</td>
+            <td><%=read1.cnic%></td>
+          </tr>
+          <tr>
+            <td>Phone No</td>
+            <td><%=read1.phone_no%></td>
+          </tr>
+          <tr>
+            <td>Mobile Model</td>
+            <td><%=read1.mobile_model%></td>
+          </tr>
+          <tr>
+            <td>Issue Date</td>
+            <td><%=read1.issue_date%></td>
+          </tr>
+          <tr>
+            <td>Mobile Price</td>
+            <td><%=read1.mobile_price%></td>
+          </tr>
+          <tr>
+            <td>Monthly EMI</td>
+            <td><%=read1.monthly_emi%></td>
+          </tr>
+        </table>
+      </div> 
+      
+    </div>
+    <form method="POST" action="/clients">
+      <ul style="margin-bottom:20px;" class="btn">
+        <input type="text" name="value" value="<%=read1.image%>" style="display: none;">
+        <button type="submit" name="form" value="edit" style="margin-right: 5px;">Update</button>
+        <button type="submit" name="form" value="delete" style="margin-left: 5px;">Delete</button>
+      </ul>
+    </form>
+    <table class="table table-bordered table-hover table-hover-cells">
+      <h2 class="page-header">Client EMI'S Details</h2>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Month</th>
+          <th>Amount</th>
+          <th>Receiving Date</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+      <form class="form" method="POST" action="/clientdetails">
+        <%var i=0%>
+        <%read.forEach(function(row){ %>
+        <%i++%>
+        <tr>
+          <th scope="row"><%=i%></th>
+          <td><%=row.month%></td>
+          <td><%=row.amount%></td>
+          <td><%=row.rdate%></td>
+          <td><button class="ebn" type="submit" name="demi" value="<%=row._id %> "><i class="fa fa-trash t" aria-hidden="true"></i></button></td>
+        </tr>
+        <% }) %>
+      </form>
+      </tbody>
+    
+    </table>
+
+    <h2 class="page-header">Add Receiveing EMI</h2>
+    <form class="form" method="POST" action="/clientdetails">
+      <input type="text" name="button" id="button" style="display: none;">
+      <input type="text" name="amount" placeholder="Amount" required id="amount">
+      <input type="date" name="rdate" placeholder="Receiveing Date" required>
+      <button type="submit" class="submit btn">ADD</button>
+    </form>
+  </div>
+
+  <footer class="footer-distributed">
+    <div class="footer-left">
+      <img class="footerlogonav" src="/images/logo c3.png" alt="">
+      <p class="footer-company-name">© 2020|All Rights Reserved By ORIC|Developed & Maintained Nouman</p>
+    </div>
+      
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p>Rohri Dist: Sukkur<span>Sindh, Pakistan</span> </p>
+      </div>
+      
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+92 3133493416</p>
+      </div>
+      
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:dierz@gmail.com">dierz@gmail.com</a></p>
+      </div>
+    </div>
+      
+    <div class="footer-right">
+      <p class="footer-company-about"><span>About the company</span>Our Story begen in 2019.We strive to dierz the number-onedesination for stylish inteligent women who crave thought-provoking conversation around limitation ideas.</p>
+      <p style="color: white">Web Design By :<a style="color: white!important" href="https://nouman26.github.io/" > https://nouman26.github.io/</a></p>
+      <div class="footer-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+      
+      </div>
+    </div>
+  </footer>
+  <script>
+    $(document).ready(function(){
+      $(window).scroll(function(){
+        if( $(window).scrollTop()==0){
+            $('nav img').removeClass("headerlogo2");
+            $('nav img').addClass('headerlogo1');
+          }
+        else if( $(window).scrollTop()>80){
+          $('nav img').removeClass("headerlogo1");
+            $('nav img').addClass('headerlogo2');
+          }
+      });
+    });
+
+    // ye is k jb hum page ko refresh kren tompreious client ki emi add nhi honi chahheye
+    var button=document.getElementById("button");
+    var amount=document.getElementById("amount");
+    function changevalue(){
+      button.value=Math.floor(Math.random() * 100) + 1;
+    }
+    amount.addEventListener("blur",changevalue)
+  </script>
+</body>
+</html>
