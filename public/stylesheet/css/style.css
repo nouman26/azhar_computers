@@ -121,9 +121,8 @@ div ul a:hover{
     background-color: #fff;
     color:#002e6e !important;
     border: 3px solid #002e6e;
-    padding: 4px 10px;
+    padding: 0px 4px;
     font-weight: bold;
-    transition: linear 1s;
 }
 
 thead>tr{
