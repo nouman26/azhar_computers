@@ -25,7 +25,8 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.set('view engine','ejs');
 
-app.set('views', path.join(__dirname, 'views'));
+// app.set('views', path.join(__dirname, 'views'));
+app.set('views', __dirname + '/app/views');
 
 var f;  // for register new client
 var u;  // for update variable
