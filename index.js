@@ -206,7 +206,7 @@ app.post("/clients",validation,upload,function(req,res){
                     var filter_clients=client_model.find({});
                     filter_clients.exec(function(err,data){
                         if (err) throw error;
-                        res.render("clients",{read:data,msg:messagenew});
+                        res.render("Clients",{read:data,msg:messagenew});
                     });
                 });
             }
@@ -224,7 +224,7 @@ app.post("/clients",validation,upload,function(req,res){
         var filter=client_model.find({});
         filter.exec(function(err,data){
             if (err) throw error;
-            res.render("clients",{read:data,msg:messagenew})
+            res.render("Clients",{read:data,msg:messagenew})
         })
     }
 });
