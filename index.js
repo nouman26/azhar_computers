@@ -24,7 +24,6 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.set('view engine','ejs');
-
 app.set('views', path.join(__dirname, 'views'));
 
 var f;  // for register new client
@@ -52,17 +51,6 @@ app.get("/register_new_admin",function(req,res){
 app.get("/register_new_client",function(req,res){
     f=0;
     res.render("add_new_client",{msgclient:messageclient})
-});
-
-app.post("/deleteemi/:id",function(req,res){
-    var client_emi_model=myDBclient_emi.model(nic,clientemischema);
-    var id = req.params.id;
-    var del=client_emi_model.findOneAndDelete(id);
-    del.exec(function(err){
-        if (err) throw error;
-    })
-    console.log(id)
-    res.redirect(307,"/clientdetails")
 });
 
 app.get("/update_client_detail",function(req,res){
@@ -191,7 +179,7 @@ app.post("/clients",validation,upload,function(req,res){
     }
     
     // client model in sign data base
-    client_model=myDBsign.model("client",clientschema);
+    client_model=myDBsign.model("Client",clientschema);
 
     // is ko middleware main is lie nhi rkha q k multer lga hai aur multer ko use krte hwe hum image upload krwa rhe hain
     if(formvar=="add_new_client"){
@@ -218,7 +206,7 @@ app.post("/clients",validation,upload,function(req,res){
                     var filter_clients=client_model.find({});
                     filter_clients.exec(function(err,data){
                         if (err) throw error;
-                        res.render("clients",{read:data,msg:messagenew});
+                        res.render("Clients",{read:data,msg:messagenew});
                     });
                 });
             }
@@ -236,7 +224,7 @@ app.post("/clients",validation,upload,function(req,res){
         var filter=client_model.find({});
         filter.exec(function(err,data){
             if (err) throw error;
-            res.render("clients",{read:data,msg:messagenew})
+            res.render("Clients",{read:data,msg:messagenew})
         })
     }
 });
