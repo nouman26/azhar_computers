@@ -283,7 +283,7 @@ app.post("/clientdetails",validation2,function(req,res){
                 if (err) throw error;
                 filter_emi.exec(function(err,data){
                     if (err) throw error;
-                    res.render("client_details",{read1:data1,read:data})
+                    res.render("Client_Details",{read1:data1,read:data})
                 });
             });
         });
@@ -313,7 +313,7 @@ app.post("/clientdetails",validation2,function(req,res){
             else{
             filter_emi.exec(function(err,data){
                 if (err) throw error;
-                res.render("client_details",{read1:data1,read:data})
+                res.render("Client_Details",{read1:data1,read:data})
             })
             }
         })
